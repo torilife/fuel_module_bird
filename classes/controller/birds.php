@@ -32,7 +32,7 @@ class Controller_Birds extends \Controller_Site
 	{
 		$this->set_default_variable4template();
 		$this->template->title = '鳥から探す　アイウエオ順';
-		$this->template->breadcrumbs = array(\Config::get('site.term.toppage') => '/', '鳥から探す' => '');
+		$this->template->breadcrumbs = array(conf('term.toppage') => '/', '鳥から探す' => '');
 
 		$data = array();
 		$data['subtitle'] = '鳥の名前から探す';
@@ -58,7 +58,7 @@ class Controller_Birds extends \Controller_Site
 		$this->set_default_variable4template();
 		$this->template->title = '鳥から探す　生活場所';
 		$this->template->breadcrumbs = array(
-			\Config::get('site.term.toppage') => '/',
+			conf('term.toppage') => '/',
 			'鳥から探す' => '/birds/',
 			'生活場所から探す' => '',
 		);
@@ -81,7 +81,7 @@ class Controller_Birds extends \Controller_Site
 		$this->set_default_variable4template();
 		$this->template->title = '鳥から探す　見られる場所';
 		$this->template->breadcrumbs = array(
-			\Config::get('site.term.toppage') => '/',
+			conf('term.toppage') => '/',
 			'鳥から探す' => '/birds/',
 			'見られる場所から探す' => '',
 		);
@@ -104,7 +104,7 @@ class Controller_Birds extends \Controller_Site
 		$this->set_default_variable4template();
 		$this->template->title = '鳥から探す　サイズ';
 		$this->template->breadcrumbs = array(
-			\Config::get('site.term.toppage') => '/',
+			conf('term.toppage') => '/',
 			'鳥から探す' => '/birds/',
 			'大きさから探す' => '',
 		);
@@ -132,7 +132,7 @@ class Controller_Birds extends \Controller_Site
 		$this->template->header_description = $bird['name'].'の特徴や写真を紹介し、最新ブログを紹介しています。';
 		$this->template->header_keywords = $bird['name'].',ニュース,ブログ,検索,写真';
 		$this->template->breadcrumbs = array(
-			\Config::get('site.term.toppage') => '/',
+			conf('term.toppage') => '/',
 			'鳥から探す' => '/birds/',
 			$bird['name'] => '',
 		);
